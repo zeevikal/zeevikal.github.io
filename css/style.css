@@ -1,0 +1,321 @@
+/* === Reset & Base === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --accent: #e8590c;
+  --text: #1a1a1a;
+  --text-secondary: #555;
+  --bg: #ffffff;
+  --border: #e5e5e5;
+  --tag-bg: #e8590c;
+  --tag-text: #fff;
+  --link: #1a6dd4;
+  --link-hover: #0d4a94;
+  --section-gap: 2.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* === Layout === */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* === Header / Hero === */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.header-photo {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.header-info h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.2rem;
+}
+
+.header-info .subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.links {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.9;
+}
+
+.links a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+.separator {
+  margin: 0 0.4rem;
+  color: var(--border);
+}
+
+/* === New / Highlight Banner === */
+.highlight-banner {
+  background: #fff8f5;
+  border-left: 3px solid var(--accent);
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0 var(--section-gap);
+  border-radius: 0 6px 6px 0;
+}
+
+.highlight-banner p {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.tag-new {
+  display: inline-block;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  vertical-align: middle;
+  margin-right: 0.3rem;
+}
+
+/* === Section Headers === */
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--border);
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.section {
+  margin-bottom: var(--section-gap);
+}
+
+/* === About paragraph === */
+.about p {
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+/* === Lists (publications, experience, etc.) === */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pub-list li,
+.exp-list li,
+.generic-list li {
+  margin-bottom: 0.8rem;
+  font-size: 0.93rem;
+  line-height: 1.65;
+}
+
+.pub-list .pub-title {
+  font-weight: 500;
+}
+
+.pub-list .pub-venue {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.pub-list .pub-links a,
+.generic-list a {
+  color: var(--link);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.pub-list .pub-links a:hover,
+.generic-list a:hover {
+  text-decoration: underline;
+  color: var(--link-hover);
+}
+
+.pub-list .pub-links a::before {
+  content: "[";
+}
+
+.pub-list .pub-links a::after {
+  content: "]";
+}
+
+/* === Experience entries === */
+.exp-entry {
+  margin-bottom: 1.2rem;
+}
+
+.exp-entry .exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.exp-entry .exp-role {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.exp-entry .exp-date {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.exp-entry .exp-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-top: 0.2rem;
+}
+
+/* === Education entries === */
+.edu-entry {
+  margin-bottom: 1rem;
+}
+
+.edu-entry .edu-degree {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.edu-entry .edu-school {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.edu-entry .edu-year {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.edu-entry .edu-details {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-top: 0.15rem;
+}
+
+/* === CV Button === */
+.cv-button {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.55rem 1.4rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.cv-button:hover {
+  background: #d14e0a;
+  color: #fff;
+}
+
+/* === Links in general === */
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--link-hover);
+}
+
+/* === Footer === */
+footer {
+  border-top: 1px solid var(--border);
+  margin-top: 1rem;
+}
+
+footer .container {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+footer a {
+  color: var(--text-secondary);
+}
+
+footer a:hover {
+  color: var(--text);
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .header-info h1 {
+    font-size: 1.5rem;
+  }
+
+  .links {
+    text-align: center;
+  }
+
+  .exp-entry .exp-header {
+    flex-direction: column;
+  }
+
+  .container {
+    padding: 1.5rem 1rem;
+  }
+}
