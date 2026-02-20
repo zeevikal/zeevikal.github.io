@@ -1,0 +1,22 @@
+# Site settings
+title: Zeev Kalyuzhner
+description: AI Researcher in Electrical Engineering | Bar-Ilan University
+url: "https://zeevikal.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
